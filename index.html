@@ -167,6 +167,396 @@
             
 
   
+    <article id="post-markdown复杂表格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/" target="_blank">markdown复杂表格</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/" class="archive-article-date">
+        <time datetime="2020-05-22T07:47:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="使用markdown自带语法"><a href="#使用markdown自带语法" class="headerlink" title="使用markdown自带语法"></a>使用markdown自带语法</h3><p><em>markdown中自带了基本的表格编辑语法:</em></p>
+<p>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:---:|:---:|:---:</span><br><span class="line">左居中|居中|右居中</span><br><span class="line">daf|1adf|1adf3</span><br></pre></td></tr></table></figure>
+
+<p>效果为:</p>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">123</th>
+<th align="right">123</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">左居中</td>
+<td align="center">居中</td>
+<td align="right">右居中</td>
+</tr>
+<tr>
+<td align="left">daf</td>
+<td align="center">1adf</td>
+<td align="right">1adf3</td>
+</tr>
+</tbody></table>
+<p>注：三个短斜杠左右的冒号用于控制对齐方式，只放置左边冒号表示文字居左，只放置右边冒号表示文字居右，如果两边都放置冒号表示文字居中。</p>
+<h3 id="使用html语法"><a href="#使用html语法" class="headerlink" title="使用html语法"></a>使用html语法</h3><p>以之前的的background为例，合并单元格：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>xpos ypos<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span> =<span class="string">"2"</span>&gt;</span> 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+    <tr>
+        <th>嘻嘻嘻</td>
+        <th>xxx</td>
+    </tr>
+    <tr>
+        <td>xpos ypos</td>
+        <td rowspan ="2"> 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。</td>
+    </tr>
+    <tr>
+        <td>嘻嘻嘻</td>
+    </tr>
+</table>
+
+<ul>
+<li>使用跨行或者跨列时，使用th标签</li>
+<li>跨行： rowspan的的参数就是要跨的行数</li>
+<li>跨列： colspan的参数就是要跨的列数</li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CSS中background定位用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/CSS%E4%B8%ADbackground%E5%AE%9A%E4%BD%8D%E7%94%A8%E6%B3%95/" target="_blank">CSS中background定位用法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/CSS%E4%B8%ADbackground%E5%AE%9A%E4%BD%8D%E7%94%A8%E6%B3%95/" class="archive-article-date">
+        <time datetime="2020-05-22T07:01:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <table>
+    <tr>
+        <th>属性</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>top left</td>
+        <td rowspan="8">如果您仅规定了一个关键词，那么第二个值将是"center"。默认值：0% 0%</td>
+    </tr>
+    <tr>
+        <td>top right</td>
+    </tr>
+    <tr>
+        <td>center left</td>
+      <tr>
+        <td>center center</td>
+      <tr>
+        <td>center right</td>
+      <tr>
+        <td>bottom left</td>
+      <tr>
+        <td>bottom center</td>
+      <tr>
+        <td>center right</td>
+       <tr>
+        <td rowspan ="2">x% y%</td>
+        <td rowspan="2">x% y%第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果您仅规定了一个值，另一个值将是 50%</td>
+    </tr>
+    <tr>
+       </tr>
+    <tr>
+        <td rowspan ="2">xpos ypos</td>
+        <td rowspan ="2"> 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果您仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。
+</td>
+       </tr>
+    <tr>
+       </tr>
+</table>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/CSS%E4%B8%ADbackground%E5%AE%9A%E4%BD%8D%E7%94%A8%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-innerHTMLl获取对象与插入内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/" target="_blank">innerHTMLl获取对象与插入内容</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/" class="archive-article-date">
+        <time datetime="2020-05-22T07:00:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>innerHTML在JS是双向功能：获取对象的内容 或 向对象插入内容</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"current"</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"current"</span>).innerHTML =<span class="string">"被插入的内容"</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们可以通过<br><code>document.getElementById(‘current’).innerHTML</code>来获取id为current的对象的内嵌内容;也可以对某对象插入内容,<br><code>document.getElementById(‘current’).innerHTML=’这是被插入的内容’;</code></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js中的backgroundPosition的坐标定位设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" target="_blank">js中的backgroundPosition的坐标定位设置</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2020-05-22T06:38:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>在CSS中background-position有对值的设置有两种：一是用数值（绝对的），另一个使用百分比（相对的）。这两种方式会有不同的浏览器兼容问题（主要是IE和FF）</strong></p>
+<h3 id="1-用数值指定："><a href="#1-用数值指定：" class="headerlink" title="1.用数值指定："></a>1.用数值指定：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITION=X+<span class="string">"PX "</span>+Y+<span class="string">"PX"</span>;  <span class="comment">//可以兼容所有的浏览器，但要注意第一个“PX ”中有一个空格。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITIONX=X+<span class="string">"PX"</span>;CON.STYLE.BACKGROUNDPOSITIONY=Y+<span class="string">"PX"</span>;<span class="comment">//不兼容FF.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-用百分比指定。"><a href="#2-用百分比指定。" class="headerlink" title="2.用百分比指定。"></a>2.用百分比指定。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITION=X%+Y%; <span class="comment">//不兼容IE </span></span><br><span class="line"></span><br><span class="line">CON.STYLE.BACKGROUNDPOSITIONX=X%;</span><br><span class="line">CON.STYLE.BACKGROUNDPOSITIONY=Y%;<span class="comment">//不兼容FF</span></span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Idea的各种快捷用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -196,7 +586,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h6 id="代码自动换行"><a href="#代码自动换行" class="headerlink" title="代码自动换行"></a>代码自动换行</h6><h6 id="对单个文件：View-gt-Active-Editor-gt-Use-Soft-Wraps"><a href="#对单个文件：View-gt-Active-Editor-gt-Use-Soft-Wraps" class="headerlink" title="对单个文件：View &gt; Active Editor &gt; Use Soft Wraps"></a>对单个文件：View &gt; Active Editor &gt; Use Soft Wraps</h6><h6 id="整个编辑器：Preferences-gt-Editor-gt-General-gt-Use-Soft-Wraps-in-Editor"><a href="#整个编辑器：Preferences-gt-Editor-gt-General-gt-Use-Soft-Wraps-in-Editor" class="headerlink" title="整个编辑器：Preferences &gt; Editor &gt; General &gt; Use Soft Wraps in Editor"></a>整个编辑器：Preferences &gt; Editor &gt; General &gt; Use Soft Wraps in Editor</h6>
+    <h3 id="代码自动换行"><a href="#代码自动换行" class="headerlink" title="代码自动换行"></a>代码自动换行</h3><p>   对单个文件：<code>View &gt; Active Editor &gt; Use Soft Wraps</code><br>   整个编辑器：<code>Preferences &gt; Editor &gt; General &gt; Use Soft Wraps in Editor</code></p>
+
     
 
     
