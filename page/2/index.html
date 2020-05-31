@@ -167,6 +167,160 @@
             
 
   
+    <article id="post-js中的backgroundPosition的坐标定位设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" target="_blank">js中的backgroundPosition的坐标定位设置</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2020-05-22T06:38:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>在CSS中background-position有对值的设置有两种：一是用数值（绝对的），另一个使用百分比（相对的）。这两种方式会有不同的浏览器兼容问题（主要是IE和FF）</strong></p>
+<h3 id="1-用数值指定："><a href="#1-用数值指定：" class="headerlink" title="1.用数值指定："></a>1.用数值指定：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITION=X+<span class="string">"PX "</span>+Y+<span class="string">"PX"</span>;  <span class="comment">//可以兼容所有的浏览器，但要注意第一个“PX ”中有一个空格。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITIONX=X+<span class="string">"PX"</span>;CON.STYLE.BACKGROUNDPOSITIONY=Y+<span class="string">"PX"</span>;<span class="comment">//不兼容FF.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-用百分比指定。"><a href="#2-用百分比指定。" class="headerlink" title="2.用百分比指定。"></a>2.用百分比指定。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CON.STYLE.BACKGROUNDPOSITION=X%+Y%; <span class="comment">//不兼容IE </span></span><br><span class="line"></span><br><span class="line">CON.STYLE.BACKGROUNDPOSITIONX=X%;</span><br><span class="line">CON.STYLE.BACKGROUNDPOSITIONY=Y%;<span class="comment">//不兼容FF</span></span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Idea的各种快捷用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/21/Idea%E7%9A%84%E5%90%84%E7%A7%8D%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/" target="_blank">Idea的各种快捷用法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/21/Idea%E7%9A%84%E5%90%84%E7%A7%8D%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/" class="archive-article-date">
+        <time datetime="2020-05-21T14:20:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="代码自动换行"><a href="#代码自动换行" class="headerlink" title="代码自动换行"></a>代码自动换行</h3><p>   对单个文件：<code>View &gt; Active Editor &gt; Use Soft Wraps</code><br>   整个编辑器：<code>Preferences &gt; Editor &gt; General &gt; Use Soft Wraps in Editor</code></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/21/Idea%E7%9A%84%E5%90%84%E7%A7%8D%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
