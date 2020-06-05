@@ -167,6 +167,87 @@
             
 
   
+    <article id="post-h5自定义属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/06/05/h5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/" target="_blank">H5自定义属性</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/06/05/h5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+        <time datetime="2020-06-05T08:21:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-05</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="1-H5规定自定义属性data-开头作为属性名且赋值"><a href="#1-H5规定自定义属性data-开头作为属性名且赋值" class="headerlink" title="1.H5规定自定义属性data-开头作为属性名且赋值"></a>1.H5规定自定义属性data-开头作为属性名且赋值</h3><p>比如:<code>&lt;div data-index = &quot;1&quot;;&gt;&lt;/div&gt;</code><br>或者使用:<code>element.setAttribute(data-index&#39;, 2)</code></p>
+<h3 id="2-获取H5自定义属性"><a href="#2-获取H5自定义属性" class="headerlink" title="2.获取H5自定义属性"></a>2.获取H5自定义属性</h3><ol>
+<li>兼容性获取</li>
+<li>H5新增element.dataset.index或者element.dataset[‘index’] i11才支持;<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">getTime</span>=<span class="string">"20"</span> <span class="attr">data-index</span>=<span class="string">"2"</span> <span class="attr">data-list-name</span>=<span class="string">"andy"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span><br><span class="line"><span class="comment">// console.log(div.getTime);</span></span><br><span class="line"><span class="built_in">console</span>.log(div.getAttribute(<span class="string">'getTime'</span>));</span><br><span class="line">div.setAttribute(<span class="string">'data-time'</span>, <span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(div.getAttribute(<span class="string">'data-index'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(div.getAttribute(<span class="string">'data-list-name'</span>));</span><br><span class="line"><span class="comment">// h5新增的获取自定义属性的方法 它只能获取data-开头的</span></span><br><span class="line"><span class="comment">// dataset 是一个集合里面存放了所有以data开头的自定义属性</span></span><br><span class="line"><span class="built_in">console</span>.log(div.dataset);</span><br><span class="line"><span class="built_in">console</span>.log(div.dataset.index);</span><br><span class="line"><span class="built_in">console</span>.log(div.dataset[<span class="string">'index'</span>]);</span><br><span class="line"><span class="comment">// 如果自定义属性里面有多个-链接的单词，我们获取的时候采取 驼峰命名法</span></span><br><span class="line"><span class="built_in">console</span>.log(div.dataset.listName);</span><br><span class="line"><span class="built_in">console</span>.log(div.dataset[<span class="string">'listName'</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/06/05/h5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS判断一个字符串中出现次数最多的字符-并统计这个次数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1003,84 +1084,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/05/22/CSS%E4%B8%ADbackground%E5%AE%9A%E4%BD%8D%E7%94%A8%E6%B3%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-innerHTMLl获取对象与插入内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/" target="_blank">innerHTMLl获取对象与插入内容</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/" class="archive-article-date">
-        <time datetime="2020-05-22T07:00:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><strong>innerHTML在JS是双向功能：获取对象的内容 或 向对象插入内容</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"current"</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"current"</span>).innerHTML =<span class="string">"被插入的内容"</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们可以通过<br><code>document.getElementById(‘current’).innerHTML</code>来获取id为current的对象的内嵌内容;也可以对某对象插入内容,<br><code>document.getElementById(‘current’).innerHTML=’这是被插入的内容’;</code></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/22/innerHTMLl%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9/">展开全文 >></a>
     </p>
     
 
