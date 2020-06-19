@@ -196,8 +196,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>此文链接转载至<a href="https://kilig947.gitee.io/personal-blog/2020/05/26/newsolve/" target="_blank" rel="noopener">Kilig</a></p>
-<p><em>编写博客时发现用markdown语法链接的图片无法载入</em><br><img src="/2020/06/19/Hexo%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.jpg" alt="img"></p>
+    <p><em>编写博客时发现用markdown语法链接的图片无法载入</em><br><img src="/2020/06/19/Hexo%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.jpg" alt="img"></p>
 <p>各种百度后发现都是要下载一个路径转换<code>hexo-asset-image</code>的插件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>可一顿操作过后，还是不能够正常显示；<br><img src="/2020/06/19/Hexo%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.jpg" alt="img"><br>然后在Ericam_老哥那里得到了一份index.js脚本的脚本，替换掉博客目录下node_modules/hexo-ass-image/index.js，并使用标签插件方式</p>
@@ -207,6 +206,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
 <p>全部设置完毕后还是显示不出图片 查看src后发现路径多了一个’ / ‘<br>于是到blog根目录找到<code>_config.yml</code>文件<br>修改url<br><img src="/2020/06/19/Hexo%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.png" alt="1"></p>
 <p>此时路径终于对了 载入图片成功了</p>
+<p>此文链接转载至<a href="https://kilig947.gitee.io/personal-blog/2020/05/26/newsolve/" target="_blank" rel="noopener">Kilig</a></p>
 
     
 
