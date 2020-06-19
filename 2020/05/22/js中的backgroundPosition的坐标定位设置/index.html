@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://okabetation.github.io/blog">
   <title>js中的backgroundPosition的坐标定位设置 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
   <meta name="description" content="在CSS中background-position有对值的设置有两种：一是用数值（绝对的），另一个使用百分比（相对的）。这两种方式会有不同的浏览器兼容问题（主要是IE和FF） 1.用数值指定：1CON.STYLE.BACKGROUNDPOSITION&#x3D;X+&quot;PX &quot;+Y+&quot;PX&quot;;  &#x2F;&#x2F;可以兼容所有的浏览器，但要注意第一个“PX ”中有一个空格。 1CON.STYLE.BACKGROUNDPOSI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的backgroundPosition的坐标定位设置">
-<meta property="og:url" content="http://yoursite.com/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/index.html">
+<meta property="og:url" content="http://okabetation.github.io/blog/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="在CSS中background-position有对值的设置有两种：一是用数值（绝对的），另一个使用百分比（相对的）。这两种方式会有不同的浏览器兼容问题（主要是IE和FF） 1.用数值指定：1CON.STYLE.BACKGROUNDPOSITION&#x3D;X+&quot;PX &quot;+Y+&quot;PX&quot;;  &#x2F;&#x2F;可以兼容所有的浏览器，但要注意第一个“PX ”中有一个空格。 1CON.STYLE.BACKGROUNDPOSI">
 <meta property="og:locale" content="cn">
@@ -236,7 +236,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2020/05/22/js中的backgroundPosition的坐标定位设置/" title="js中的backgroundPosition的坐标定位设置" target="_blank">http://yoursite.com/2020/05/22/js中的backgroundPosition的坐标定位设置/</a>
+          <a href="http://okabetation.github.io/blog/2020/05/22/js中的backgroundPosition的坐标定位设置/" title="js中的backgroundPosition的坐标定位设置" target="_blank">http://okabetation.github.io/blog/2020/05/22/js中的backgroundPosition的坐标定位设置/</a>
         </li>
         
         <li>
@@ -303,7 +303,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://okabetation.github.io/blog/2020/05/22/js%E4%B8%AD%E7%9A%84backgroundPosition%E7%9A%84%E5%9D%90%E6%A0%87%E5%AE%9A%E4%BD%8D%E8%AE%BE%E7%BD%AE/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -372,7 +372,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 <a href="http://yoursite.com/" target="_blank">okabetation</a>
+    		&copy; 2020 <a href="http://okabetation.github.io/blog/" target="_blank">okabetation</a>
     	</div>
       	<div class="footer-right">
 			
@@ -679,56 +679,6 @@
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
-  
-    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
-<script type="text/javascript">
-  /**
-   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
-   */
-  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
-    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
-  //特定的模型json文件名称
-  var modelPathJson = {
-    "epsilon2_1": "Epsilon2.1",
-    "gf": "Gantzert_Felixander",
-    "haru/01": "haru01",
-    "haru/02": "haru02",
-    "nietzsche": "nietzche"
-  }
-
-  
-    var modelName = "hibiki";
-  
-
-  var modelJsonPath = "";
-  if (modelPathJson[modelName]) {
-    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
-      ".model.json";
-  } else {
-    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
-  }
-  L2Dwidget.init({
-    model: {
-      jsonPath: modelJsonPath
-    },
-    display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
-      
-    },
-    mobile: {
-      
-       scale: 0.6 
-    },
-    react: {
-       opacity: 0.8 
-    }
-  })
-
-</script>
-
   
   
 </body>
