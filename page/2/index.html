@@ -167,6 +167,127 @@
             
 
   
+    <article id="post-markdown复杂表格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/" target="_blank">markdown复杂表格</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/" class="archive-article-date">
+        <time datetime="2020-05-22T07:47:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="使用markdown自带语法"><a href="#使用markdown自带语法" class="headerlink" title="使用markdown自带语法"></a>使用markdown自带语法</h3><p><em>markdown中自带了基本的表格编辑语法:</em></p>
+<p>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:---:|:---:|:---:</span><br><span class="line">左居中|居中|右居中</span><br><span class="line">daf|1adf|1adf3</span><br></pre></td></tr></table></figure>
+
+<p>效果为:</p>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">123</th>
+<th align="right">123</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">左居中</td>
+<td align="center">居中</td>
+<td align="right">右居中</td>
+</tr>
+<tr>
+<td align="left">daf</td>
+<td align="center">1adf</td>
+<td align="right">1adf3</td>
+</tr>
+</tbody></table>
+<p>注：三个短斜杠左右的冒号用于控制对齐方式，只放置左边冒号表示文字居左，只放置右边冒号表示文字居右，如果两边都放置冒号表示文字居中。</p>
+<h3 id="使用html语法"><a href="#使用html语法" class="headerlink" title="使用html语法"></a>使用html语法</h3><p>以之前的的background为例，合并单元格：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>xpos ypos<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span> =<span class="string">"2"</span>&gt;</span> 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+    <tr>
+        <th>嘻嘻嘻
+        </th><th>xxx
+    </th></tr>
+    <tr>
+        <td>xpos ypos</td>
+        <td rowspan="2"> 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。</td>
+    </tr>
+    <tr>
+        <td>嘻嘻嘻</td>
+    </tr>
+</table>
+
+<ul>
+<li>使用跨行或者跨列时，使用th标签</li>
+<li>跨行： rowspan的的参数就是要跨的行数</li>
+<li>跨列： colspan的参数就是要跨的列数</li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/22/markdown%E5%A4%8D%E6%9D%82%E8%A1%A8%E6%A0%BC/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CSS中background定位用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
