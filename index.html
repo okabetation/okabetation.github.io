@@ -167,6 +167,100 @@
             
 
   
+    <article id="post-CSS3中box-sizing属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/06/27/CSS3%E4%B8%ADbox-sizing%E5%B1%9E%E6%80%A7/" target="_blank">CSS3中box-sizing属性</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/06/27/CSS3%E4%B8%ADbox-sizing%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+        <time datetime="2020-06-27T13:45:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-27</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="CSS-中的-box-sizing-属性定义了-user-agent-应该如何计算一个元素的总宽度和总高度"><a href="#CSS-中的-box-sizing-属性定义了-user-agent-应该如何计算一个元素的总宽度和总高度" class="headerlink" title="CSS 中的 box-sizing 属性定义了 user agent 应该如何计算一个元素的总宽度和总高度"></a>CSS 中的 box-sizing 属性定义了 user agent 应该如何计算一个元素的总宽度和总高度</h3><p><em>在 CSS 盒子模型的默认定义里，你对一个元素所设置的 <code>width</code> 与 <code>height</code> 只会应用到这个元<br>素的内容区。如果这个元素有任何的 <code>border</code> 或 <code>padding</code> ，绘制到屏幕上时的盒子宽度和高度<br>会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个<br>元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。</em></p>
+<p>box-sizing 属性可以被用来调整这些表现:</p>
+<p><strong><code>content-box</code>  是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有<br>100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</strong></p>
+<ul>
+<li>标准盒模型: box-sizing: content-box<br>content-box:<br>width = content width;<br>height = content height</li>
+</ul>
+<p><strong><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。也就是<br>说，如果你将一个元素的width设为100px，那么这100px会包含它的border和padding，内<br>容区的实际宽度是width减去(border + padding)的值。大多数情况下，这使得我们更容易地<br>设定一个元素的宽高。</strong></p>
+<ul>
+<li>IE盒模型 box-sizing: border-box<br>border-box:<br>width = border + padding + content width<br>heigth = border + padding + content heigth</li>
+</ul>
+<p><strong>注：<code>border-box</code>不包含<code>margin</code></strong></p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>本例显示了不同的 box-sizing 值如何改变两个原本相同的元素的渲染尺寸</p>
+<p><strong>HTML</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div class="content-box"&gt;Content box<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"border-box"</span>&gt;</span>Border box<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">8px</span> solid red;</span><br><span class="line">  <span class="attribute">background</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-box</span> &#123; </span><br><span class="line">  <span class="attribute">box-sizing</span>: content-box; </span><br><span class="line">  <span class="comment">/* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px</span></span><br><span class="line"><span class="comment">     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px</span></span><br><span class="line"><span class="comment">     Content box width: 160px</span></span><br><span class="line"><span class="comment">     Content box height: 80px */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.border-box</span> &#123; </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="comment">/* Total width: 160px</span></span><br><span class="line"><span class="comment">     Total height: 80px</span></span><br><span class="line"><span class="comment">     Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px</span></span><br><span class="line"><span class="comment">     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Result</strong></p>
+<p><img src="/2020/06/27/CSS3%E4%B8%ADbox-sizing%E5%B1%9E%E6%80%A7/1.png" alt="1"></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/06/27/CSS3%E4%B8%ADbox-sizing%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Hexo解决无法显示图片问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -925,104 +1019,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/05/24/JavaScript%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-初学JS作用域和作用域链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/23/%E5%88%9D%E5%AD%A6JS%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE/" target="_blank">初学JS作用域和作用域链</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/23/%E5%88%9D%E5%AD%A6JS%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE/" class="archive-article-date">
-        <time datetime="2020-05-23T10:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p><strong>1. 什么是作用域</strong><br>作用域是在运行时代码中的某些特定部分中变量，函数和对象的可访问性。<br>换句话说，作用域决定了代码区块中变量和其他资源的可见性</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outFun2</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  <span class="keyword">var</span> inVariable = <span class="string">"内层变量2"</span>; </span><br><span class="line">&#125; </span><br><span class="line">outFun2();<span class="comment">//要先执行这个函数，否则根本不知道里面是啥 </span></span><br><span class="line"><span class="built_in">console</span>.log(inVariable); <span class="comment">// Uncaught ReferenceError: inVariable is not defined</span></span><br></pre></td></tr></table></figure>
-<p>从上面的例子可以体会到作用域的概念，变量inVariable在全局作用域没有声明，所以在全局作用域下取值会报错。我们可以这样理解：<strong>作用域就是一个独立的地盘，让变量不会外泄、暴露出去</strong>。也就是说<strong><em>作用域的用处就是隔离变量，不同作用域下同名变量不会有冲突</em></strong>。</p>
-<p><strong>2. 全局作用域和函数作用域（局部作用域）</strong><br>全局作用域：在script或者一个独立的js文件中，在全局作用域中定义的变量  全局变量。在任何位置都可以访问</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       str = <span class="string">'abc'</span>; <span class="comment">//不建议这样命名，不规范</span></span><br><span class="line">       <span class="built_in">console</span>.log(num);</span><br><span class="line">       <span class="built_in">console</span>.log(str);</span><br><span class="line">     &#125;</span><br><span class="line">     fn();</span><br><span class="line">     <span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>浏览器关闭后 全局变量被销毁，变量所占的内存会回收</li>
-</ul>
-<p>局部作用域：任何一个函数的内部都有一个局部作用域，在局部作用域中定义的变量 局部变量。局部变量只有在定义该变量的函数中可以访问</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> num = <span class="number">5</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// num is not defined</span></span><br><span class="line">     <span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>函数执行完毕后，局部变量被销毁，变量所占的内存会回收</li>
-</ul>
-<p><strong>3. 块级作用域(待补充)</strong><br>ES6 中开始加入了块级作用域</p>
-<ul>
-<li>代码块<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="number">5</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(num);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>如下代码中，console.log(a)要得到num变量，但是在当前的作用域中没有定义num。当前作用域没有定义的变量，这成为自由变量 。<br>自由变量的值如何得到<strong>向父级作用域寻找</strong><br>如果父级也没呢？再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是作用域链 。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局作用域 -- 0级作用域链</span></span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">5</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// f1 局部作用域   -- 1级作用域链</span></span><br><span class="line">      <span class="comment">// var num = 15;</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        <span class="comment">// f2 局部作用域  -- 2级作用域链</span></span><br><span class="line">        <span class="built_in">console</span>.log(num);</span><br><span class="line">      &#125;</span><br><span class="line">      f2();</span><br><span class="line">    &#125;</span><br><span class="line">    f1();</span><br></pre></td></tr></table></figure>
-<ul>
-<li>本文部分引入作者@<a href="https://developer.51cto.com/art/201903/593198.htm" target="_blank" rel="noopener">浪里行舟</a></li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/23/%E5%88%9D%E5%AD%A6JS%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE/">展开全文 >></a>
     </p>
     
 
