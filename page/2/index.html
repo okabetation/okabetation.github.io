@@ -167,6 +167,128 @@
             
 
   
+    <article id="post-JavaScript对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/24/JavaScript%E5%AF%B9%E8%B1%A1/" target="_blank">JavaScript对象</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/24/JavaScript%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+        <time datetime="2020-05-24T12:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="创建对象的四种方法"><a href="#创建对象的四种方法" class="headerlink" title="创建对象的四种方法"></a>创建对象的四种方法</h2><h3 id="1-对象字面量"><a href="#1-对象字面量" class="headerlink" title="1. 对象字面量"></a>1. 对象字面量</h3><p>对象由两个成员组成 :<strong>属性</strong>和<strong>方法</strong>，<br>其中属性是键值对的形式<br><strong><em>键（key）：就是你存的值的编号；</em></strong><br><strong><em>值（value）：就是你要存放的数据；</em></strong></p>
+<p>以创建一只dog对象举例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dog = &#123;</span><br><span class="line">        name: <span class="string">'MO'</span>, </span><br><span class="line">        type: <span class="string">'中华田园犬'</span>,</span><br><span class="line">        age: <span class="number">2</span>,</span><br><span class="line">        color: <span class="string">'yellow'</span>,</span><br><span class="line">        bark: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//this 在方法中代表的是当前对象 dog</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">'汪汪汪'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>this 在方法中代表的是当前对象dog</li>
+<li>访问属性 <strong><em>对象.属性名</em></strong> <code>console.log(dog.name);</code></li>
+<li>属性的另一种访问方式 <strong><em>对象[‘属性’]</em></strong><br><code>console.log(dog[&#39;name&#39;]);</code><br><code>console.log(dog[&#39;type&#39;]);</code></li>
+<li>访问方法 <strong><em>对象.方法名</em></strong> <code>dog.bark();</code></li>
+</ul>
+<p><strong><em>函数和方法的区别</em></strong></p>
+<ul>
+<li>函数：独立存在的函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    fn(); <span class="comment">//函数调用</span></span><br></pre></td></tr></table></figure></li>
+<li>方法: 属于对象的函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dog.bark(); <span class="comment">//方法的调用</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-new-Object"><a href="#2-new-Object" class="headerlink" title="2. new Object()"></a>2. new Object()</h3><p>Object是一个<strong><em>构造函数</em></strong> 用new的方式来调用构造函数<br><strong><em>new Object()</em></strong>调用构造函数会在内存中创建一个对象</p>
+<p>以创建一个英雄举例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//属性</span></span><br><span class="line">    <span class="keyword">var</span> hero = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    hero.name = <span class="string">'黄忠'</span>;</span><br><span class="line">    hero.weapon = <span class="string">'弓箭'</span>;</span><br><span class="line">    hero.equipment = [<span class="string">'头盔'</span>,<span class="string">'靴子'</span>,<span class="string">'盔甲'</span>];</span><br><span class="line">    hero.blood = <span class="number">100</span>;</span><br><span class="line"><span class="comment">//方法</span></span><br><span class="line">    hero.attack = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">': 射箭'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-工厂方法"><a href="#3-工厂方法" class="headerlink" title="3. 工厂方法"></a>3. 工厂方法</h3><p>创建多个对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createHero</span>(<span class="params">name,weapon,equipment,blood</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> hero = <span class="keyword">new</span> <span class="built_in">Object</span>(); <span class="comment">//返回一个空的对象</span></span><br><span class="line">    <span class="comment">//属性</span></span><br><span class="line">    hero.name = name;</span><br><span class="line">    hero.weapon = weapon;</span><br><span class="line">    hero.equipment = equipment;</span><br><span class="line">    hero.blood = blood;</span><br><span class="line">    <span class="comment">//方法</span></span><br><span class="line">    hero.attack = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">': 射箭'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//返回hero对象给外部去使用，外部无法访问函数内部的变量</span></span><br><span class="line">    <span class="keyword">return</span> hero;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="comment">//调用对象</span></span><br><span class="line">    <span class="keyword">var</span> hero1 = createHero(<span class="string">'黄忠'</span>,<span class="string">'弓箭'</span>,[<span class="string">'头盔'</span>,<span class="string">'帽子'</span>],<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">var</span> hero2 = createHero(<span class="string">'刘备'</span>,<span class="string">'剑'</span>,[<span class="string">'头盔'</span>,<span class="string">'帽子'</span>],<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-自定义构造函数"><a href="#4-自定义构造函数" class="headerlink" title="4. 自定义构造函数"></a>4. 自定义构造函数</h3><p>帕斯卡命名: 第一个单词的第一个字母大写，后续的每一个单词的第一个字母都大写</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Hero</span>(<span class="params">name,weapon,equipment,blood</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//this 动态的给对象增加成员</span></span><br><span class="line">        <span class="comment">//this 指向了当前对象</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.weapon = weapon;</span><br><span class="line">        <span class="keyword">this</span>.equipment = equipment;</span><br><span class="line">        <span class="keyword">this</span>.blood = blood;</span><br><span class="line">        <span class="keyword">this</span>.attack = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">': 射箭'</span>);</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line">        <span class="keyword">var</span> hero1 = <span class="keyword">new</span> Hero(<span class="string">'黄忠'</span>,<span class="string">'弓箭'</span>,[<span class="string">'头盔'</span>,<span class="string">'帽子'</span>],<span class="number">100</span>);</span><br><span class="line">        <span class="keyword">var</span> hero2 = <span class="keyword">new</span> Hero(<span class="string">'刘备'</span>,<span class="string">'剑'</span>,[<span class="string">'头盔'</span>,<span class="string">'帽子'</span>],<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="new-的执行过程"><a href="#new-的执行过程" class="headerlink" title="new 的执行过程"></a>new 的执行过程</h2><ol>
+<li>在内存中创建了一个空的对象<code>var hero = new Object();</code></li>
+<li>让构造函数中的this指向刚刚创建的对象</li>
+<li>执行构造函数，在构造函数中设置属性和方法(不仅限于)</li>
+<li>返回了当前对象</li>
+</ol>
+<h2 id="遍历和删除对象的属性"><a href="#遍历和删除对象的属性" class="headerlink" title="遍历和删除对象的属性"></a>遍历和删除对象的属性</h2><ol>
+<li><p>访问对象的属性<br> <code>obj.name</code><br> <code>obj[&#39;name&#39;]</code><br> <code>for in</code>  可以遍历对象的成员,获取所有属性对应的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> obj = &#123;</span><br><span class="line">   name: <span class="string">'zs'</span>,</span><br><span class="line">   age: <span class="number">18</span>,</span><br><span class="line">   sex: <span class="string">'男'</span>,</span><br><span class="line">   sayHi: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">': hello'</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(key + <span class="string">'---'</span> + obj[key]);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态增加对象的属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">       o[<span class="string">'a'</span> + i] = i * <span class="number">2</span>;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> o) &#123;</span><br><span class="line">       <span class="built_in">console</span>.log(key + <span class="string">'---'</span> + o[key]);</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除属性<br>delete 删除对象的成员</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">      name: <span class="string">'abc'</span>,</span><br><span class="line">      say: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     <span class="built_in">console</span>.log(o.name);<span class="comment">//输出abc</span></span><br><span class="line">     <span class="keyword">delete</span> o.name;</span><br><span class="line">     <span class="built_in">console</span>.log(o.name);<span class="comment">//undefined</span></span><br><span class="line">     </span><br><span class="line">    <span class="built_in">console</span>.log(o.say);<span class="comment">//输出function</span></span><br><span class="line">    <span class="keyword">delete</span> o.say;</span><br><span class="line">    <span class="built_in">console</span>.log(o.say);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/24/JavaScript%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-初学JS作用域和作用域链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
