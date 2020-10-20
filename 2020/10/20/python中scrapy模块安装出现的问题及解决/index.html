@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://okabetation.github.io/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/5.png">
 <meta property="og:image" content="http://okabetation.github.io/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/4.png">
 <meta property="article:published_time" content="2020-10-20T08:14:00.000Z">
-<meta property="article:modified_time" content="2020-10-20T08:31:14.651Z">
+<meta property="article:modified_time" content="2020-10-20T08:41:43.255Z">
 <meta property="article:author" content="okabetation">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://okabetation.github.io/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/1.png">
@@ -203,7 +203,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">239字</span>
+      <span class="post-count">326字</span>
     </span>
   </span>
 
@@ -223,9 +223,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>一开始在cmd输入<code>pip install scrapy</code>下载完成后，安装出现报错：<br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/1.png" alt="1"><br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/2.png" alt="2"></p>
-<p>所以我们需要换另一种形式来安装，我们先将scrapy安装过程中所用到的依赖的库安装完成之后，在安装scrapy，这样子便可以安装成功了。</p>
-<p>需要安装的依赖库有Twisted 、pywin32。需要注意的是我们安装的这些库，都是通过wheel来安装的。因此在安装这些库之前，先得安装wheel。打开控制台窗口，输入pip install wheel，先安装wheel库。<br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/3.png" alt="3"></p>
+    <p><strong>一开始在cmd输入<code>pip install scrapy</code>下载完成后，安装出现报错：</strong><br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/1.png" alt="1"><br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/2.png" alt="2"></p>
+<p><font color="red">所以我们需要换另一种形式来安装，我们先将scrapy安装过程中所用到的依赖的库安装完成之后，在安装scrapy，这样子便可以安装成功了。</font></p>
+<p>需要安装的依赖库有Twisted 、pywin32。需要注意的是我们安装的这些库，都是通过wheel来安装的。因此在安装这些库之前，先得安装wheel。打开控制台窗口，输入<code>pip install wheel</code>，先安装wheel库。</p>
+<p><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/3.png" alt="3"></p>
 <ul>
 <li>windows系统：<ul>
 <li>pip install wheel</li>
@@ -239,6 +240,9 @@
 </ul>
 <p>在安装twisted的时候会出现<br><img src="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/4.png" alt="4">、</p>
 <p>此时需要Twisted的文件路径下使用cmd本地安装<code>pip install Twisted‑17.1.0‑cp36‑cp36m‑win_amd64.whl</code></p>
+<ul>
+<li><strong>whl格式：whl是python库的一种打包格式，用于通过pip进行安装，相当于Python库的安装包文件。whl文件本质上是一个压缩格式文件，可以通过改扩展名为zip查看其中内容。whl格式用于替代python早起的eggs格式，是python打包格式的事实标准</strong></li>
+</ul>
 
     
 
@@ -334,6 +338,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/22/pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2%E4%BB%A3%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
