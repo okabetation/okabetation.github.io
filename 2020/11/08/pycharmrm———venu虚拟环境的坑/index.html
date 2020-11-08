@@ -6,26 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://okabetation.github.io/blog">
-  <title>在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty | Hexo</title>
+  <title>pycharmrm———venu虚拟环境的坑 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="2020-11-08 21:55:37后续更新此处为虚拟环境切换到本地环境  昨天跟着教学安装了本地安装了scrapy模块，但是pycharm中的项目环境却无法使用，无法导入模块  File-&gt;settings-&gt;Project:(你的工程名)-&gt;Project Interpreter,发现这里的版本并不是自己预先设置的venu下的python.exe  尝试更改环境    提示">
+  <meta name="description" content="制作当前虚拟环境下已经安装的第三方库的清单。（依赖）pip freeze &gt; requirements.txt 打开pycharm的terminal，只要到 requirements.txt 所在的目录下，使用如下命令 ，就能在当前的 python 环境中导入所有需要的包。 pip install -r requirements.txt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty">
-<meta property="og:url" content="http://okabetation.github.io/blog/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/index.html">
+<meta property="og:title" content="pycharmrm———venu虚拟环境的坑">
+<meta property="og:url" content="http://okabetation.github.io/blog/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2020-11-08 21:55:37后续更新此处为虚拟环境切换到本地环境  昨天跟着教学安装了本地安装了scrapy模块，但是pycharm中的项目环境却无法使用，无法导入模块  File-&gt;settings-&gt;Project:(你的工程名)-&gt;Project Interpreter,发现这里的版本并不是自己预先设置的venu下的python.exe  尝试更改环境    提示">
+<meta property="og:description" content="制作当前虚拟环境下已经安装的第三方库的清单。（依赖）pip freeze &gt; requirements.txt 打开pycharm的terminal，只要到 requirements.txt 所在的目录下，使用如下命令 ，就能在当前的 python 环境中导入所有需要的包。 pip install -r requirements.txt">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="http://okabetation.github.io/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/1.png">
-<meta property="og:image" content="http://okabetation.github.io/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/2.png">
-<meta property="og:image" content="http://okabetation.github.io/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/3.png">
-<meta property="og:image" content="http://okabetation.github.io/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/4.png">
-<meta property="article:published_time" content="2020-10-20T09:04:17.000Z">
-<meta property="article:modified_time" content="2020-11-08T13:56:33.207Z">
+<meta property="article:published_time" content="2020-11-08T13:51:03.000Z">
+<meta property="article:modified_time" content="2020-11-08T14:04:49.179Z">
 <meta property="article:author" content="okabetation">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://okabetation.github.io/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,14 +164,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="在python安装scrapy模块后却无法在pycharm使用environment_location_diretory_is_not_emptyhexo-在python安装scrapy模块后却无法在pycharm使用Environment-location-diretory-is-not-empty" class="article article-type-在python安装scrapy模块后却无法在pycharm使用environment_location_diretory_is_not_emptyhexo " itemscope itemprop="blogPost">
+            <article id="post-pycharmrm———venu虚拟环境的坑" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty
+      pycharmrm———venu虚拟环境的坑
     </h1>
   
 
@@ -188,8 +183,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/" class="archive-article-date">
-        <time datetime="2020-10-20T09:04:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
+<a href="/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/" class="archive-article-date">
+        <time datetime="2020-11-08T13:51:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-08</time>
 </a>
 
   
@@ -202,7 +197,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">192字</span>
+      <span class="post-count">72字</span>
     </span>
   </span>
 
@@ -222,24 +217,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><em>2020-11-08 21:55:37后续更新</em><br>此处为虚拟环境切换到本地环境</p>
-<ul>
-<li><p><strong><font size="4">昨天跟着教学安装了本地安装了scrapy模块，但是pycharm中的项目环境却无法使用，无法导入模块</font></strong></p>
-</li>
-<li><p><strong><font size="4">File-&gt;settings-&gt;Project:(你的工程名)-&gt;Project Interpreter,发现这里的版本并不是自己预先设置的venu下的python.exe</font></strong><br><img src="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/1.png" alt="1"></p>
-</li>
-<li><p><strong><font size="4">尝试更改环境</font></strong></p>
-</li>
-<li><p><img src="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/2.png" alt="2"></p>
-</li>
-<li><p><strong><font size="4">提示：Environment location diretory is not empty 。查询了很多教程，多数的做法都是删除了工程下的venv文件，但是依旧没有起到作用。发现下边还有一个选项，于是选中下面的Existing environment ，重新进行设置：</font></strong></p>
-</li>
-</ul>
-<p><img src="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/3.png" alt="3"></p>
-<ul>
-<li><strong><font size="4">设置完成后python本地的模块导入成功了，也能使用import导入了</font></strong></li>
-</ul>
-<p><img src="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/4.png" alt="4"></p>
+    <p><strong>制作当前虚拟环境下已经安装的第三方库的清单。（依赖）</strong><br><code>pip freeze &gt; requirements.txt</code></p>
+<p>打开pycharm的terminal，只要到 <code>requirements.txt</code> 所在的目录下，使用如下命令 ，就能在当前的 python 环境中导入所有需要的包。</p>
+<p><code>pip install -r requirements.txt</code></p>
 
     
 
@@ -254,7 +234,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://okabetation.github.io/blog/2020/10/20/在python安装scrapy模块后却无法在pycharm使用Environment-location-diretory-is-not-empty/" title="在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty" target="_blank">http://okabetation.github.io/blog/2020/10/20/在python安装scrapy模块后却无法在pycharm使用Environment-location-diretory-is-not-empty/</a>
+          <a href="http://okabetation.github.io/blog/2020/11/08/pycharmrm———venu虚拟环境的坑/" title="pycharmrm———venu虚拟环境的坑" target="_blank">http://okabetation.github.io/blog/2020/11/08/pycharmrm———venu虚拟环境的坑/</a>
         </li>
         
         <li>
@@ -321,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://okabetation.github.io/blog/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://okabetation.github.io/blog/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -336,18 +316,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          pycharmrm———venu虚拟环境的坑
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/10/20/python%E4%B8%ADscrapy%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python中scrapy模块安装出现的问题及解决</div>
+    <a href="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在python安装scrapy模块后却无法在pycharm使用Environment_location_diretory_is_not_empty</div>
       <i class="icon-circle-right"></i>
     </a>
   

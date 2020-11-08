@@ -167,6 +167,83 @@
             
 
   
+    <article id="post-pycharmrm———venu虚拟环境的坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/" target="_blank">pycharmrm———venu虚拟环境的坑</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/" class="archive-article-date">
+        <time datetime="2020-11-08T13:51:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-08</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>制作当前虚拟环境下已经安装的第三方库的清单。（依赖）</strong><br><code>pip freeze &gt; requirements.txt</code></p>
+<p>打开pycharm的terminal，只要到 <code>requirements.txt</code> 所在的目录下，使用如下命令 ，就能在当前的 python 环境中导入所有需要的包。</p>
+<p><code>pip install -r requirements.txt</code></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/11/08/pycharmrm%E2%80%94%E2%80%94%E2%80%94venu%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9D%91/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="在python安装scrapy模块后却无法在pycharm使用environment_location_diretory_is_not_emptyhexo-在python安装scrapy模块后却无法在pycharm使用Environment-location-diretory-is-not-empty" class="article article-type-在python安装scrapy模块后却无法在pycharm使用environment_location_diretory_is_not_emptyhexo  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -196,7 +273,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <ul>
+    <p><em>2020-11-08 21:55:37后续更新</em><br>此处为虚拟环境切换到本地环境</p>
+<ul>
 <li><p><strong><font size="4">昨天跟着教学安装了本地安装了scrapy模块，但是pycharm中的项目环境却无法使用，无法导入模块</font></strong></p>
 </li>
 <li><p><strong><font size="4">File-&gt;settings-&gt;Project:(你的工程名)-&gt;Project Interpreter,发现这里的版本并不是自己预先设置的venu下的python.exe</font></strong><br><img src="/2020/10/20/%E5%9C%A8python%E5%AE%89%E8%A3%85scrapy%E6%A8%A1%E5%9D%97%E5%90%8E%E5%8D%B4%E6%97%A0%E6%B3%95%E5%9C%A8pycharm%E4%BD%BF%E7%94%A8Environment-location-diretory-is-not-empty/1.png" alt="1"></p>
@@ -941,91 +1019,9 @@
 
 
   
-    <article id="post-探究JS中instanceof原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/29/%E6%8E%A2%E7%A9%B6JS%E4%B8%ADinstanceof%E5%8E%9F%E7%90%86/" target="_blank">探究JS中instanceof原理</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/29/%E6%8E%A2%E7%A9%B6JS%E4%B8%ADinstanceof%E5%8E%9F%E7%90%86/" class="archive-article-date">
-        <time datetime="2020-05-29T10:23:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>instanceof 严格来说是Java中的一个双目运算符，用来测试一个对象是否为一个类的实例，用法为：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boolean result = obj <span class="keyword">instanceof</span> Class</span><br></pre></td></tr></table></figure>
-<p>其中<strong>obj</strong>为一个对象，<strong>Class</strong>表示一个类或者一个接口，当obj为Class的对象，或者是其直接或间接子类,或者是其接口的实现类，结果result都返回true，否则返回false。</p>
-<ul>
-<li>编译器会检查 obj 是否能转换成右边的class类型，如果不能转换则直接报错，如果不能确定类型，则通过编译，具体看运行时定。</li>
-</ul>
-<h2 id="1-obj必须为引用类型，不能是基本类型"><a href="#1-obj必须为引用类型，不能是基本类型" class="headerlink" title="1.obj必须为引用类型，不能是基本类型"></a>1.obj必须为引用类型，不能是基本类型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i = <span class="number">0</span>;</span><br><span class="line">System.out.println(i <span class="keyword">instanceof</span> Integer);<span class="comment">//编译不通过</span></span><br><span class="line">System.out.println(i <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//编译不通过</span></span><br></pre></td></tr></table></figure>
-<p>instanceof运算符只能用作对象的判断</p>
-<h2 id="2-obj为-class类的实例对象"><a href="#2-obj为-class类的实例对象" class="headerlink" title="2.obj为 class类的实例对象"></a>2.obj为 class类的实例对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer integer = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line">System.out.println(integer <span class="keyword">instanceof</span>  Integer);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/29/%E6%8E%A2%E7%A9%B6JS%E4%B8%ADinstanceof%E5%8E%9F%E7%90%86/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
